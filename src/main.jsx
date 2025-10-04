@@ -29,7 +29,7 @@ const router=createBrowserRouter(
   )
 )
 const client = new ApolloClient({
-  link: new HttpLink({ uri: "https://vercel-habit-tracker-backend.vercel.app/graphql" ,
+  link: new HttpLink({ uri: "https://vercel-habit-backend-tracker.vercel.app/graphql" ,
        credentials: 'include'
   }),
   cache: new InMemoryCache(),
