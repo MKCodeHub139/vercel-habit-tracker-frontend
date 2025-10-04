@@ -1,0 +1,9 @@
+.react-calender{
+    background: rgb(102, 224, 102) !important;
+    /* padding: 10px !important; */
+    margin: 2px 0 !important;
+}
+.react-calender:hover{
+    background: rgb(123, 240, 123) !important;
+}
+
