@@ -17,10 +17,8 @@ token
 }
 `
 const LogoutUser =gql`
-mutation logoutUser($id:ID!){
-logoutUser(id:$id){
-  id
-}
+mutation {
+logoutUser
 }
 `
 const CreateHabit= gql`

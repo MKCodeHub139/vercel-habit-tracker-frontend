@@ -112,14 +112,6 @@ const Home = () => {
       navigate("/login");
     }
   }, [user, navigate, loading]);
-  useEffect(() => {
-    if (habits?.getHabits?.length === 0)
-      return (
-        <div className="w-full h-screen p-5 text-xl text-white text-center ">
-          No habits found!
-        </div>
-      );
-  }, [habits]);
   if (isLoading) return <h1>Loading</h1>;
   return (
     <div className="min-h-screen py-[4rem]">
@@ -147,7 +139,7 @@ const Home = () => {
           </Link>
         </div>
         <div className="habits flex flex-wrap gap-5 my-11">
-          {activeHabit === "Daily" ? (
+         {activeHabit === "Daily" ? (
             dailyHabits?.length > 0 ? (
               dailyHabits?.map((habit) => (
                 <Daily

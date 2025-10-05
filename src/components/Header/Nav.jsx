@@ -8,16 +8,21 @@ import logo from '../../assets/habitbridge-logo-white.svg';
 import { useState } from "react";
 const Nav = () => {
   const [mobileNav,setMobileNav] =useState(false)
+  const { user } = useGetUser();
+  const navigate = useNavigate();
+  const [Logout_User] = useMutation(LogoutUser);
   const handleLogout = async () => {
-    const res = await Logout_User({ variables: { id: user?.getUser?.id } });
-    let confirmed =confirm('Are you sure you want to logout')
-    if(confirmed && res){
-        navigate("/login");
+      if (!user?.getUser?.id) {
+    console.error("No user ID found – cannot log out");
+    return;
+  }
+    const confirmed =confirm('Are you sure you want to logout')
+     if(confirmed){
+       const res = await Logout_User({ variables: { id: user?.getUser?.id }});
+      console.log(res)
+      if(res) navigate("/login");
     }
   };
-  const { user } = useGetUser();
-  const [Logout_User] = useMutation(LogoutUser);
-  const navigate = useNavigate();
   return (
     <>
     <div className="main text-[#FFFFFF] sticky top-0 flex items-center z-40 ">

@@ -47,6 +47,7 @@ const handleCreateHabit=async(e)=>{
       }})
       if(response){
         notify('habit created successfully')
+        setTimeout(()=>navigate('/'),3000)
         setFormaData({
     title:'',
     category:'',
