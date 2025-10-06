@@ -27,7 +27,7 @@ const Nav = () => {
     <>
     <div className="main text-[#FFFFFF] sticky top-0 flex items-center z-40 ">
       <nav className="flex sm:justify-evenly justify-between items-center w-full mx-auto bg-[#FF5722] rounded-2xl mt-2 py-2 px-4 ">
-       <div className="logo flex-shrink-0 flex items-center justify-center w-[220px] sm:w-[280px] md:w-[320px] h-[2.5rem] relative">
+       <div className="logo flex-shrink-0 flex items-center justify-center w-[220px] sm:w-[280px] md:w-[270px] h-[2.5rem] relative">
       <Link to="/" className="flex items-center justify-center w-full">
         <img src={logo} alt="logo" className="max-h-[10rem] w-auto object-contain"/>
       </Link>
@@ -68,9 +68,9 @@ const Nav = () => {
                   className={({ isActive }) =>
                     `${
                       isActive
-                        ? "bg-[#FFC107]  border-0"
+                        ? "bg-[#FFC107]  border-[#F9AFAF] hover:bg-[#f1b707]"
                         : ""
-                    } cursor-pointer border-2 hover:bg-[#f1b707]  hover:border-0 rounded-full py-1 px-3`
+                    } cursor-pointer border-2 hover:bg-[#FFC107]  hover:border-[#F9AFAF] rounded-full py-1 px-3`
                   }
                 >
                   Signup
@@ -80,9 +80,9 @@ const Nav = () => {
                   className={({ isActive }) =>
                     `${
                       isActive
-                        ? "bg-[#FFC107]  border-fuchsia-100"
+                        ? "bg-[#FFC107]  border-[#F9AFAF] hover:bg-[#f1b707]"
                         : ""
-                    } cursor-pointer border-2 hover:bg-[#f1b707]  hover:border-0 rounded-full py-1 px-3`
+                    } cursor-pointer border-2 hover:bg-[#FFC107]  hover:border-[#F9AFAF] rounded-full py-1 px-3`
                   }
                 >
                   Login
@@ -96,7 +96,7 @@ const Nav = () => {
         </div>
       </nav>
     </div>
-        <div className={`mobile-menu absolute right-0 top-[4rem] h-[40vh] w-[90vw] sm:hidden  z-48 text-[#FFFF] bg-[#afd9ec] rounded-2xl ${mobileNav ? "block":'hidden'}`} >
+        <div className={`mobile-menu absolute right-0 top-[4rem] max-h-[40vh] max-w-[90vw] sm:hidden  z-48 text-[#FFFF] bg-[#afd9ec] rounded-2xl ${mobileNav ? "block":'hidden'}`} >
               <ul className={`p-5 `}>
           {user ? (
             <li className="flex flex-col gap-5">
@@ -111,7 +111,7 @@ const Nav = () => {
                     isActive
                       ? "bg-[#FFC107]  border-[#F9AFAF] hover:bg-[#f1b707]"
                       : ""
-                  } text-4xl cursor-pointer border-2 hover:bg-[#FFC107]  hover:border-[#F9AFAF] rounded-full px-3 flex justify-center`
+                  } cursor-pointer border-2 hover:bg-[#FFC107]  hover:border-[#F9AFAF] rounded-full px-3 flex justify-center`
                 }
               >
                 <IoIosAdd />
@@ -131,12 +131,12 @@ const Nav = () => {
                 <NavLink
                   to="/signup"
                   className={({ isActive }) =>
-                    `${
-                      isActive
-                        ? "bg-[#FFC107]  border-0"
-                        : ""
-                    } cursor-pointer border-2 hover:bg-[#f1b707]  hover:border-0 rounded-full py-1 px-3`
-                  }
+                  `${
+                    isActive
+                      ? "bg-[#FFC107]  border-[#F9AFAF] hover:bg-[#f1b707]"
+                      : ""
+                  } cursor-pointer border-2 hover:bg-[#FFC107]  hover:border-[#F9AFAF] rounded-full px-3 flex justify-center`
+                }
                 >
                   Signup
                 </NavLink>
@@ -145,9 +145,9 @@ const Nav = () => {
                   className={({ isActive }) =>
                     `${
                       isActive
-                        ? "bg-[#FFC107]  border-fuchsia-100"
+                        ? "bg-[#FFC107]  border-[#F9AFAF] hover:bg-[#f1b707]"
                         : ""
-                    } cursor-pointer border-2 hover:bg-[#f1b707]  hover:border-0 rounded-full py-1 px-3`
+                    } cursor-pointer border-2 hover:bg-[#FFC107]  hover:border-[#F9AFAF] rounded-full px-3 flex justify-cente`
                   }
                 >
                   Login
